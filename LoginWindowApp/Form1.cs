@@ -32,10 +32,18 @@ namespace LoginWindowApp
             DataTable dt = new DataTable();
             sda.Fill(dt);
 
-            this.Hide();
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+                this.Hide();
 
-            Main ss = new Main();
-            ss.Show();
+                Main ss = new Main();
+                ss.Show();
+            } 
+            else
+            {
+                MessageBox.Show("Please check your username and password");
+            }
+            
         }
     }
 }
