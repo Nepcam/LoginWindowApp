@@ -21,5 +21,12 @@ namespace LoginWindowApp
         {
             this.Close();
         }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main ss = new Main();
+            ss.Show();
+        }
     }
 }
